@@ -1,0 +1,19 @@
+.big-button {
+  width: 15rem;
+  font-size: 2rem;
+}
+
+.big-button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.thead {
+  color: white;
+  background-color: black;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgrey;
+}
