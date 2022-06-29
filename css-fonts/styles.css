@@ -4,4 +4,5 @@
 
 .p-one, .p-two {
   font-family: 'Space Mono', monospace;
+  line-height: 3rem;
 }
