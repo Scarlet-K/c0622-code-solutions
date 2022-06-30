@@ -1,0 +1,29 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-third {
+  flex-basis: calc(100% / 3);
+}
+
+img {
+  width: 100%;
+}
+
+.font-style {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column-fourth {
+  flex-basis: calc(100% / 4);
+}
