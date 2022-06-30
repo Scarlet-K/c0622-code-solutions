@@ -4,6 +4,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 .row {
   display: flex;
 }
@@ -16,14 +20,14 @@
   flex-basis: calc(100% / 3);
 }
 
-img {
-  width: 100%;
+.column-fourth {
+  flex-basis: calc(100% / 4);
+}
+
+.column-two-third {
+  flex-basis: 66%;
 }
 
 .font-style {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.column-fourth {
-  flex-basis: calc(100% / 4);
 }
