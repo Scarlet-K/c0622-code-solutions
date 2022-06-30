@@ -18,9 +18,10 @@ select {
   width: 100%;
   border: solid lightgrey 1px;
   border-radius: 5px;
+
+  /* border-style: inset;  */
   padding: 10px;
   margin: 2px 5px 10px;
-  box-shadow: 1px 1px 1px grey;
 }
 
 .big-font {
@@ -32,12 +33,12 @@ select {
 }
 
 label {
-  font-size: 9px;
+  font-size: 10px;
   color: black;
   font-weight: bold;
   padding: 10px;
   margin-left: 5px;
-  font-family: AtlasGrotesk, serif;
+  font-family: "Brandon Grotesque", serif;
   letter-spacing: 0.5px;
 }
 
@@ -50,7 +51,7 @@ label {
 }
 
 .backg-grey {
-  background-color: rgb(232 230 230);
+  background-color: rgb(241 239 239);
 }
 
 button {
