@@ -2,8 +2,12 @@ body {
   font-family: Karla, sans-serif;
 }
 
+p {
+  line-height: 1rem;
+}
+
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -19,16 +23,20 @@ body {
   flex-basis: 100%;
 }
 
-.column-half {
+.column-three-fifth {
   flex-basis: 60%;
 }
 
-.column-fourth {
-  flex-basis: 25%;
+.column-four-fifth {
+  flex-basis: 80%;
 }
 
-.column-sixth {
-  flex-basis: calc(100% / 3);
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-fifth {
+  flex-basis: calc(100% / 5);
 }
 
 .icons {
@@ -59,14 +67,32 @@ body {
   font-size: 2.5rem;
 }
 
-.font-med {
-  font-size: 1rem;
-}
-
 .font-small {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .pd-lr {
   padding: 0 5rem;
+}
+
+.learn-more {
+  padding: 0.4rem 1.5rem;
+  border: solid #d24e47 0.1rem;
+  background-color: white;
+  color: #d24e47;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+
+.margin-bottom {
+  margin-bottom: 0;
+}
+
+.pd {
+  padding: 1rem 6.5rem 2rem 0.5rem;
+}
+
+.pd-bottom {
+  padding-bottom: 2rem;
 }
