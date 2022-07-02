@@ -12,21 +12,19 @@ body {
 }
 
 .font-grey {
-  color: rgb(111 111 111);
+  color: #7a7a7a;
 }
 
 .font-white {
-  color: white;
-  line-height: 1rem;
+  color: rgb(234 234 234);
 }
 
 .font-sm {
-  font-size: 0.7rem;
-  line-height: 1rem;
+  font-size: 0.6rem;
 }
 
 .font-med {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .row {
@@ -51,6 +49,11 @@ body {
 
 .pd-l {
   padding-left: 1rem;
+}
+
+.product .company {
+  margin: 0;
+  padding: 1.5rem;
 }
 
 .pd-lr {
@@ -79,7 +82,7 @@ body {
 }
 
 .backg-grey {
-  background-color: rgb(233 233 233);
+  background-color: #fafafa;
 }
 
 .margin-b {
@@ -96,10 +99,11 @@ body {
 
 .get-started-button {
   text-decoration: none;
-  color: white;
+  color: rgb(234 234 234);
   background-color: #294464;
-  padding: 0.7rem 2.5rem;
+  padding: 0.7rem 2rem;
   border-radius: 0.2rem;
+  font-size: 0.75rem;
 }
 
 .text-upper {
@@ -107,13 +111,18 @@ body {
 }
 
 .backg-darkgrey {
-  background-color: rgb(67 66 66);
-}
-
-.margin-0 {
-  margin: 0;
+  background-color: #525351;
 }
 
 img {
-  width: 50%;
+  width: 100%;
+}
+
+.line-h {
+  line-height: 1rem;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
