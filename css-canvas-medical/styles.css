@@ -1,0 +1,111 @@
+body {
+  font-family: Avenir, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.font-tiempo {
+  font-family: "Tiempos Headline", serif;
+}
+
+.font-grey {
+  color: rgb(111 111 111);
+}
+
+.font-white {
+  color: white;
+  line-height: 1rem;
+}
+
+.font-sm {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+.font-med {
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.pd-tb {
+  padding: 1.5rem 0;
+}
+
+.pd-l {
+  padding-left: 1rem;
+}
+
+.pd-lr {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.backg-grey {
+  background-color: rgb(233 233 233);
+}
+
+.margin-b {
+  margin-bottom: 0;
+}
+
+.location-list {
+  line-height: 1.5rem;
+}
+
+.text-deco {
+  text-decoration: none;
+}
+
+.get-started-button {
+  text-decoration: none;
+  color: white;
+  background-color: #294464;
+  padding: 0.7rem 2.5rem;
+  border-radius: 0.2rem;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.backg-darkgrey {
+  background-color: rgb(67 66 66);
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+img {
+  width: 50%;
+}
