@@ -41,6 +41,10 @@ body {
   flex-basis: 50%;
 }
 
+.column-fourth {
+  flex-basis: calc(100% / 4);
+}
+
 .pd-tb {
   padding: 1.5rem 0;
 }
@@ -60,6 +64,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: end;
 }
 
 .justify-center {
