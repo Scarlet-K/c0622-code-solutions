@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  font-weight: normal;
 }
 
 body {
@@ -35,6 +34,10 @@ body {
 
 .font-med {
   font-size: 0.8rem;
+}
+
+.font-normal {
+  font-weight: normal;
 }
 
 .row {
