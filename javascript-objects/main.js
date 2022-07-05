@@ -21,8 +21,8 @@ var vehicle = {
 
 vehicle.color = 'white';
 vehicle.isConvertible = false;
-console.log('Value of vehicle[color]:', vehicle['color']);
-console.log('Value of vehicle[isConvertible]:', vehicle['isConvertible']);
+console.log("Value of vehicle['color']:", vehicle['color']);
+console.log("Value of vehicle['isConvertible']:", vehicle['isConvertible']);
 console.log('Value of vehicle:', vehicle);
 
 var pet = {
