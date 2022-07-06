@@ -1,0 +1,60 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-4 {
+  flex-basis: calc(100% / 4);
+}
+
+.col-3 {
+  flex-basis: calc(100% / 3);
+}
+
+.font-barlow {
+  font-family: Barlow, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.pd-5 {
+  padding: 0 5rem;
+}
+
+.pd-lr {
+  padding: 0 1rem;
+}
+
+.pd-b {
+  padding-bottom: 0.5rem;
+}
+
+.backg-lgrey {
+  background-color: #f7f8fa;
+}
+
+.font-sm {
+  font-size: 0.7rem;
+}
+
+.font-med {
+  font-size: 0.8rem;
+}
