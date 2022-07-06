@@ -52,20 +52,8 @@ body {
   flex-basis: 50%;
 }
 
-.col-third {
-  flex-basis: calc(100% / 3);
-}
-
-.col-fourth {
-  flex-basis: 25%;
-}
-
-.col-sixth {
-  flex-basis: calc(100% / 6);
-}
-
-.col-three-fourth {
-  flex-basis: 75%;
+.col-fluid {
+  flex-basis: auto;
 }
 
 .pd-tb {
@@ -77,10 +65,6 @@ body {
   padding-bottom: 2rem;
 }
 
-.pd-tb3 {
-  padding: 3rem 0;
-}
-
 .pd-lr {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -88,10 +72,6 @@ body {
 
 .pd-r {
   padding-right: 1rem;
-}
-
-.pd-l {
-  padding-left: 2rem;
 }
 
 .pd {
@@ -145,10 +125,12 @@ body {
 
 .backg-dgrey {
   background-color: #525351;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
-img {
-  width: 100%;
+img.logo {
+  width: 100px;
 }
 
 .line-h {
@@ -193,10 +175,6 @@ ul.product {
 
 .mg {
   margin: 0.7rem 0;
-}
-
-.mg-inherit {
-  margin: inherit;
 }
 
 .margin-tb {
