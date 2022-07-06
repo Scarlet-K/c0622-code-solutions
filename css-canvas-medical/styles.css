@@ -44,20 +44,28 @@ body {
   display: flex;
 }
 
-.col {
+.col-full {
   flex-basis: 100%;
 }
 
-.column-half {
+.col-half {
   flex-basis: 50%;
 }
 
-.column-third {
+.col-third {
   flex-basis: calc(100% / 3);
 }
 
-.column-sixth {
+.col-fourth {
+  flex-basis: 25%;
+}
+
+.col-sixth {
   flex-basis: calc(100% / 6);
+}
+
+.col-three-fourth {
+  flex-basis: 75%;
 }
 
 .pd-tb {
@@ -92,6 +100,10 @@ body {
 
 .align-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .text-center {
