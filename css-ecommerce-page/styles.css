@@ -1,0 +1,64 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-fifth {
+  flex-basis: calc(100% / 5);
+}
+
+.image-box {
+  width: 100%;
+  height: 18rem;
+}
+
+img {
+  width: 100%;
+  height: 18rem;
+}
+
+.font-lgrey {
+  color: #e0e0e0;
+}
+
+p,
+span,
+del {
+  font-size: 12px;
+}
+
+.backg-o {
+  background-color: #fbeee4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.cover {
+  object-fit: fill;
+}
+
+div.col-fifth {
+  padding: 0 0.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
