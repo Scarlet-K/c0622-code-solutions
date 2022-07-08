@@ -52,8 +52,8 @@ body {
   flex-basis: 50%;
 }
 
-.col-fluid {
-  flex-basis: auto;
+.col-two-third {
+  flex-basis: calc(200% / 3);
 }
 
 .pd-tb {
@@ -72,6 +72,10 @@ body {
 
 .pd-r {
   padding-right: 1rem;
+}
+
+.pd-l {
+  padding-left: 1.5rem;
 }
 
 .pd {
@@ -181,6 +185,6 @@ ul.product {
   margin: 1.5rem 0;
 }
 
-.location-list p {
-  padding: 0.5rem 0;
+div.location-list p {
+  padding: 0.7rem 0;
 }
