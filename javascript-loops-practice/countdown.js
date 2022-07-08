@@ -1,11 +1,10 @@
 /* exported countdown */
-// function countdown(number) {
-//   var array = [];
-//   while (number >= 0) {
-//     array.push(number--);
-//   }
-//   return array;
-// }
+
+// 5, 4, 3, 2, 1, 0
+// for each number from the input number to zero:
+// store the current number
+// decrement current number by 1
+// return ALL stored numbers
 
 function countdown(number) {
   var array = [];
