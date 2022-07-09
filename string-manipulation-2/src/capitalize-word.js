@@ -7,14 +7,12 @@
 // create a condition for JavaScript
 
 function capitalizeWord(word) {
-  var firstLetter = word[0].toUpperCase();
-  var newString = '';
+  var newString = word[0].toUpperCase();
   for (var i = 1; i < word.length; i++) {
-    newString += word[i];
     if (word.toLowerCase() === 'javascript') {
       newString = 'JavaScript';
     } else {
-      newString = firstLetter + newString;
+      newString += word[i].toLowerCase();
     }
   }
   return newString;
