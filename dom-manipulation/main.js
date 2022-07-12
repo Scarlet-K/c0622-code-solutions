@@ -18,7 +18,18 @@ function handleClicks(event) {
   }
 }
 
+// if < 4 cold
+// < 7 cool
+// < 10 tepid
+// < 13 warm
+// < 16 hot
+// else nuclear
+
+// var temperature =
+// $hotButton.className = 'hot-button ' + temperature;
+
 $hotButton.addEventListener('click', handleClicks);
+// $clickCount.textContent = 'Clicks: ' + clickCount;
 
 // 4 is cool
 // 7 is tepid
