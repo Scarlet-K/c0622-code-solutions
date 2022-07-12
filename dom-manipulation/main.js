@@ -1,38 +1,26 @@
 var clickCount = 0;
+var temperature = '';
 var $hotButton = document.querySelector('.hot-button');
 var $clicks = document.querySelector('.click-count');
 
 function handleClicks(event) {
   clickCount++;
   $clicks.textContent = clickCount;
-  if ((clickCount >= 4) && (clickCount < 7)) {
-    $hotButton.className = 'hot-button cool';
-  } else if ((clickCount >= 7) && (clickCount < 10)) {
-    $hotButton.className = 'hot-button tepid';
-  } else if ((clickCount >= 10) && (clickCount < 13)) {
-    $hotButton.className = 'hot-button warm';
-  } else if ((clickCount >= 13) && (clickCount < 16)) {
-    $hotButton.className = 'hot-button hot';
-  } else if (clickCount >= 16) {
-    $hotButton.className = 'hot-button nuclear';
+  if (clickCount < 4) {
+    temperature = 'cold';
+  } else if (clickCount < 7) {
+    temperature = 'cool';
+  } else if (clickCount < 10) {
+    temperature = 'tepid';
+  } else if (clickCount < 13) {
+    temperature = 'warm';
+  } else if (clickCount < 16) {
+    temperature = 'hot';
+  } else {
+    temperature = 'nuclear';
   }
+  $hotButton.className = 'hot-button ' + temperature;
+  $clicks.textContent = 'Clicks: ' + clickCount;
 }
 
-// if < 4 cold
-// < 7 cool
-// < 10 tepid
-// < 13 warm
-// < 16 hot
-// else nuclear
-
-// var temperature =
-// $hotButton.className = 'hot-button ' + temperature;
-
 $hotButton.addEventListener('click', handleClicks);
-// $clickCount.textContent = 'Clicks: ' + clickCount;
-
-// 4 is cool
-// 7 is tepid
-// 10 is warm
-// 13 is hot
-// 16 is nuclear
