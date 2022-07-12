@@ -27,8 +27,10 @@ function capitalizeWords(string) {
   var firstChar1 = string[0].toUpperCase();
   // newString = 'N'
   for (var i = 1; i < string.length; i++) {
-    if (string[i] !== ' ') {
-      firstChar1 += string[i];
+    firstChar1 += string[i];
+    if (string[i] === ' ') {
+      firstChar1 += string[i + 1].toUpperCase();
+      return firstChar1;
     }
   }
   return firstChar1;
