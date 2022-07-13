@@ -4,10 +4,18 @@
 // event.key = returns the value of the key pressed
 //
 
-var $container = document.querySelectorAll('.container');
+var $characters = document.querySelectorAll('span');
+var counter = 0;
+window.addEventListener('keydown', handleKeydown);
 
-$container.addEventListener('keydown', handleKeydown);
-
-function handleKeydown() {
-  return 0;
+function handleKeydown(event) {
+  if (($characters[counter].textContent === event.key) && (counter !== $characters.length - 1)) {
+    $characters[counter].className = 'correct';
+    $characters[counter + 1].className = 'border-bottom';
+    counter++;
+  } else if (($characters[counter].textContent !== event.key) && (counter !== $characters.length - 1)) {
+    $characters[counter].className = 'incorrect';
+  } else if (counter === $characters.length - 1) {
+    event.preventDefault();
+  }
 }
