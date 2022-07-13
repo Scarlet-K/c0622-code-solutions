@@ -8,29 +8,13 @@
 // attach the uppercased first character of the new word that comes after the space
 //
 
-// function capitalizeWords(string) {
-//   var firstChar1 = string[0].toUpperCase();
-//   // newString = 'N'
-//   for (var i = 1; i < string.length; i++) {
-//     if (string[i] !== ' ') {
-//       firstChar1 += string[i];
-//       // newString = 'Needssolution'
-//     } else {
-//       firstChar1 += string[i + 1].toUpperCase();
-//       // newString = 'NeedsSsolution'
-//     }
-//   }
-//   return firstChar1;
-// }
-
-// function capitalizeWords(string) {
-//   var firstChar1 = string[0].toUpperCase();
-//   for (var i = 1; i < string.length; i++) {
-//     firstChar1 += string[i].toLowerCase();
-//     if (string[i] === ' ') {
-//       firstChar1.slice(string[i]);
-//       // var firstChar2 = string[i + 1].toUpperCase();
-//     }
-//   }
-//   return firstChar1;
-// }
+function capitalizeWords(string) {
+  var firstChar1 = string[0].toUpperCase();
+  for (var i = 1; i < string.length; i++) {
+    firstChar1 += string[i].toLowerCase();
+    if (string[i] === ' ') {
+      firstChar1 += string.slice(i + 1, i + 2).toUpperCase();
+    }
+  }
+  return firstChar1;
+}
