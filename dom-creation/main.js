@@ -60,8 +60,8 @@ var pokedex = [
 function renderPokemon(pokemon) {
   var $outerDiv = document.createElement('div');
   $outerDiv.setAttribute('class', 'column-third');
-  var $card = document.createElement('div');
-  $card.setAttribute('class', 'pokemon-card');
+  var $cardDiv = document.createElement('div');
+  $cardDiv.setAttribute('class', 'pokemon-card');
   var $img = document.createElement('img');
   $img.setAttribute('src', pokemon.imageUrl);
   var $textDiv = document.createElement('div');
@@ -73,9 +73,9 @@ function renderPokemon(pokemon) {
   var $p = document.createElement('p');
   $p.textContent = pokemon.description;
 
-  $outerDiv.appendChild($card);
-  $card.appendChild($img);
-  $card.appendChild($textDiv);
+  $outerDiv.appendChild($cardDiv);
+  $cardDiv.appendChild($img);
+  $cardDiv.appendChild($textDiv);
   $textDiv.appendChild($heading2);
   $textDiv.appendChild($heading3);
   $textDiv.appendChild($p);
