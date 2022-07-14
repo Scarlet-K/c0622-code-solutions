@@ -16,13 +16,14 @@
 
 function capitalizeWords(string) {
   var firstChar1 = string[0].toUpperCase();
-  for (var i = 1; i < string.length; i++) {
-    firstChar1 += string[i].toLowerCase();
+  var firstChar2 = '';
+  for (var i = 0; i < string.length; i++) {
     if (string[i] === ' ') {
-      firstChar1 += string.slice(i);
+      firstChar2 += string.slice(i)[1].toUpperCase();
+      // ' word'
     }
   }
-  return firstChar1;
+  return firstChar1 + firstChar2;
 }
 
 // function capitalizeWords(string) {
