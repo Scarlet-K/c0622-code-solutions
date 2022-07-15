@@ -1,28 +1,20 @@
 /* exported capitalizeWords */
 
-// upperCase and lowerCase returns what is changed
-// slice returns what is sliced
-//
+// turn all the characters to lowercase
+// store the result in a variable
+// split the lowercased characters at the space
+// store the result in a variable = array
+// loop over the array and uppercase all the first characters of each word
+// concatenate with the rest of the word starting at the second character
+// push the new concatenated word into a new array
+// return the array as a string
 
-// add each character lowercased as long as it isn't after a space
-// check if a characters is a space
-// if the characters is a space
-
-// function capitalizeWords(string) {
-//   var firstChar1 = string[0].toUpperCase();
-//   var sliced = '';
-//   for (var i = 1; i < string.length; i++) {
-//     if (string[i] === ' ') {
-//       for (var k = 0; k < firstChar1.length; k++) {
-//         if (string[k] === ' ') {
-//           sliced += string.slice(k, k + 2).toUpperCase();
-//           break;
-//         }
-//       }
-//     } else {
-//       firstChar1 += string[i].toLowerCase();
-//     }
-//     firstChar1 += sliced;
-//   }
-//   return firstChar1;
-// }
+function capitalizeWords(string) {
+  var newString = string.toLowerCase();
+  var wordsArray = newString.split(' ');
+  var newWord = [];
+  for (var i = 0; i < wordsArray.length; i++) {
+    newWord.push(wordsArray[i][0].toUpperCase() + wordsArray[i].slice(1));
+  }
+  return newWord.join(' ');
+}
