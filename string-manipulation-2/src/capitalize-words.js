@@ -1,20 +1,20 @@
 /* exported capitalizeWords */
 
-// turn all the characters to lowercase
-// store the result in a variable
-// split the lowercased characters at the space
-// store the result in a variable = array
-// loop over the array and uppercase all the first characters of each word
-// concatenate with the rest of the word starting at the second character
-// push the new concatenated word into a new array
-// return the array as a string
+// loop over the string
+// if the character before the current character isn’t a space
+// add the character to the new string
+// else
+// capitalize the current character
+// add it to the new string
 
 function capitalizeWords(string) {
-  var newString = string.toLowerCase();
-  var wordsArray = newString.split(' ');
-  var newWord = [];
-  for (var i = 0; i < wordsArray.length; i++) {
-    newWord.push(wordsArray[i][0].toUpperCase() + wordsArray[i].slice(1));
+  var newString = string[0].toUpperCase();
+  for (var i = 1; i < string.length; i++) {
+    if (string[i - 1] !== ' ') {
+      newString += string[i].toLowerCase();
+    } else {
+      newString += string[i].toUpperCase();
+    }
   }
-  return newWord.join(' ');
+  return newString;
 }
