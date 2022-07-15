@@ -1,5 +1,9 @@
 /* exported capitalizeWords */
 
+// slice returns what is cut out from the string
+// slice at every space
+// concatenate the return with the first index uppercased
+
 // every first character of a word is uppercase
 // the first word's first character is always at index 0
 // every next word starts after a space
@@ -16,14 +20,14 @@
 
 function capitalizeWords(string) {
   var firstChar1 = string[0].toUpperCase();
-  var firstChar2 = '';
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] === ' ') {
-      firstChar2 += string.slice(i)[1].toUpperCase();
-      // ' word'
+  for (var i = 1; i < string.length; i++) {
+    if (string[i] !== ' ') {
+      firstChar1 += string[i].toLowerCase();
+    } else if (string[i] === ' ') {
+      firstChar1 += string.slice(i, i + 2).toUpperCase();
     }
   }
-  return firstChar1 + firstChar2;
+  return firstChar1;
 }
 
 // function capitalizeWords(string) {
