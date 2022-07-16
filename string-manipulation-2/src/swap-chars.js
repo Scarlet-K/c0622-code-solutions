@@ -1,30 +1,31 @@
 /* exported swapChars */
 
-// create a variable with character at firstIndex
-// create a variable with character at secondIndex
-// loop over the string
-// if the index matches the firstIndex
+// loop over the characters
+// slice at each character
+// create an empty array to push each character
+// if the index value is the firstIndex, save it in a variable
+// push a space character as placeholder
+// if the index value is the secondIndex, save it in a variable
+// push a space character as placeholder
+// if the index value is not the firstIndex or the secondIndex push the character at the index
+// reassign the value of character at second index of array to the firstChar variable
+// reassign the value of character at first index of array to the secondChar variable
+// join the return
 
-// replace the firstIndex with secondIndex
-// var first = 'a'
-// var second = b
-// first = second
-// firstletter = b
-// second = b
-// second = first
-// string is immutable!
-
-// function swapChars(firstIndex, secondIndex, string) {
-//   var first = [string[firstIndex]];
-//   var second = [string[secondIndex]];
-//   var stringArray = [];
-//   for (var i = 0; i < string.length; i++) {
-//     stringArray.push(string[i]);
-//     if (string[i] === string[firstIndex]) {
-//       stringArray.push(second);
-//     } else if (string[i] === string[secondIndex]) {
-//       stringArray.push(first);
-//     }
-//   }
-//   return stringArray.join('');
-// }
+function swapChars(firstIndex, secondIndex, string) {
+  var firstChar = string[firstIndex];
+  var secondChar = string[secondIndex];
+  var newString = [];
+  for (var i = 0; i < string.length; i++) {
+    if (i === firstIndex) {
+      newString.push(' ');
+    } else if (i === secondIndex) {
+      newString.push(' ');
+    } else {
+      newString.push(string.slice(i, i + 1));
+    }
+  }
+  newString[secondIndex] = firstChar;
+  newString[firstIndex] = secondChar;
+  return newString.join('');
+}
