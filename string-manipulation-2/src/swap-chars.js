@@ -15,17 +15,15 @@
 function swapChars(firstIndex, secondIndex, string) {
   var firstChar = string[firstIndex];
   var secondChar = string[secondIndex];
-  var newString = [];
+  var newString = '';
   for (var i = 0; i < string.length; i++) {
     if (i === firstIndex) {
-      newString.push(' ');
+      newString += secondChar;
     } else if (i === secondIndex) {
-      newString.push(' ');
+      newString += firstChar;
     } else {
-      newString.push(string.slice(i, i + 1));
+      newString += string.slice(i, i + 1);
     }
   }
-  newString[secondIndex] = firstChar;
-  newString[firstIndex] = secondChar;
-  return newString.join('');
+  return newString;
 }
