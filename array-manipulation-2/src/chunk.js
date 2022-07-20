@@ -25,3 +25,15 @@
 //   }
 //   return result;
 // }
+
+// slice at size
+// push into array
+// push remainder into remainder array
+
+// function chunk(array, size) {
+//   var newArray = [];
+//   for (var i = 0; i < array.length; i + size) {
+//     newArray.push(array.slice(array[i], size));
+//   }
+//   return newArray;
+// }
