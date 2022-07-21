@@ -37,3 +37,19 @@
 //   }
 //   return newArray;
 // }
+
+function chunk(array, size) {
+  var finalArray = [];
+  var subArray = [];
+  for (var i = 0; i < array.length; i++) {
+    subArray = [array[i]];
+    if (subArray.length === size) {
+      finalArray.push(subArray);
+      continue;
+    } else {
+      subArray.push(array[i + 1]);
+      continue;
+    }
+  }
+  return finalArray;
+}
