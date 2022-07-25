@@ -1,24 +1,22 @@
 /* exported omit */
 
 // create a new object
-// loop over the source objects property
-// at each source objects property:
-// loop over the strings in keys array
-// check against all items in the keys array
-
-// if the  does NOT have the string in keys
-// the return value is undefined
-// therefore, if the return value of the condition is undefined
-// use the current string in keys to access the source object's property and value
-// assign the source object's property and value to the new object
-// return the new object
+// loop over the keys in source object using a for in loop
+// assign the keys and value of the source object to the new object
+// at every iteration of the for in loop:
+// loop over all the keys in the keys ARRAY
+// check if the current key of the source object matches any keys in the ARRAY
+// if it matches, delete the current key of the new object
 
 function omit(source, keys) {
-  var omitObj = {};
-  for (keys in source) {
-    if (source[keys] === undefined) {
-      omitObj[keys] = source[keys];
+  var newObject = {};
+  for (var key in source) {
+    newObject[key] = source[key];
+    for (var i = 0; i < keys.length; i++) {
+      if (key === keys[i]) {
+        delete newObject[key];
+      }
     }
   }
-  return omitObj;
+  return newObject;
 }

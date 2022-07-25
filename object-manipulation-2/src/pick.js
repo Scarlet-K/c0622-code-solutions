@@ -6,23 +6,11 @@
 // assign the source's property and value to the new object
 // return the new object
 
-// function pick(source, keys) {
-//   var newObj = {};
-//   for (var i = 0; i < keys.length; i++) {
-//     if (source[keys[i]] !== undefined) {
-//       newObj[keys[i]] = source[keys[i]];
-//     }
-//   }
-//   return newObj;
-// }
-
 function pick(source, keys) {
   var newObj = {};
-  for (var key in source) {
-    for (var i = 0; i < keys.length; i++) {
-      if (key === keys[i]) {
-        newObj[key] = source[key];
-      }
+  for (var i = 0; i < keys.length; i++) {
+    if (source[keys[i]] !== undefined) {
+      newObj[keys[i]] = source[keys[i]];
     }
   }
   return newObj;
