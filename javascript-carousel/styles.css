@@ -1,0 +1,58 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1rem;
+  border: solid black 0.2rem;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: calc(100% / 2);
+}
+
+.col-fourth {
+  width: 25%;
+}
+
+img {
+  width: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 2rem;
+}
+
+.pd-tb {
+  padding: 1.5rem 0;
+}
+
+.pd-lr {
+  padding: 0 2rem;
+}
+
+i.fa-circle {
+  padding: 0.3rem;
+}
