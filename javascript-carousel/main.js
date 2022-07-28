@@ -1,9 +1,9 @@
 var images = ['images/001.png', 'images/004.png', 'images/007.png', 'images/025.png', 'images/039.png'];
+var $img = document.querySelector('img');
 var intervalID = setInterval(getNextIndex, 3000);
 var index = 0;
 var $leftArrow = document.querySelector('.fa-chevron-left');
 var $rightArrow = document.querySelector('.fa-chevron-right');
-var $img = document.querySelector('img');
 var $circleList = document.querySelectorAll('.fa-circle');
 var $circleContainer = document.querySelector('.circle-container');
 
@@ -47,18 +47,24 @@ function handleCircles(event) {
 }
 
 function getPreviousIndex() {
-  // console.log(index);
   if (index !== 0) {
     index--;
     $img.setAttribute('src', images[index]);
+    $circleList[index].classList.add('fa-solid');
+    $circleList[index].classList.remove('fa-regular');
+    $circleList[index + 1].classList.remove('fa-solid');
+    $circleList[index + 1].classList.add('fa-regular');
   } else {
     index = images.length - 1;
     $img.setAttribute('src', images[index]);
+    $circleList[images.length - 1].classList.add('fa-solid');
+    $circleList[images.length - 1].classList.remove('fa-regular');
+    $circleList[0].classList.remove('fa-solid');
+    $circleList[0].classList.add('fa-regular');
   }
 }
 
 function getNextIndex() {
-  // console.log(index);
   if (index < images.length - 1) {
     index++;
     $img.setAttribute('src', images[index]);
@@ -75,5 +81,3 @@ function getNextIndex() {
     $circleList[images.length - 1].classList.add('fa-regular');
   }
 }
-
-// function setIndex
