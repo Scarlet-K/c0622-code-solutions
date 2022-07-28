@@ -3,14 +3,13 @@ var $userList = document.querySelector('#user-list');
 function getUserData() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
-  xhr.responseType = 'JSON';
+  xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
     console.log('status:', xhr.status);
     console.log('reponse:', xhr.response);
-    var parsedData = JSON.parse(xhr.response);
-    for (var i = 0; i < parsedData.length; i++) {
+    for (var i = 0; i < xhr.response.length; i++) {
       var $li = document.createElement('li');
-      $li.textContent = parsedData[i].name;
+      $li.textContent = xhr.response[i].name;
       $userList.append($li);
     }
   });
