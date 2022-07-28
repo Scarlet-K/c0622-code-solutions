@@ -4,7 +4,7 @@ var index = 0;
 var $leftArrow = document.querySelector('.fa-chevron-left');
 var $rightArrow = document.querySelector('.fa-chevron-right');
 var $img = document.querySelector('img');
-var $circles = document.querySelectorAll('.fa-circle');
+var $circleList = document.querySelectorAll('.fa-circle');
 var $circleContainer = document.querySelector('.circle-container');
 
 $leftArrow.addEventListener('click', showPreviousImage);
@@ -14,53 +14,65 @@ $circleContainer.addEventListener('click', handleCircles);
 function showPreviousImage(event) {
   clearInterval(intervalID);
   getPreviousIndex();
+  intervalID = setInterval(getNextIndex, 3000);
 }
 
 function showNextImage(event) {
   clearInterval(intervalID);
   getNextIndex();
+  intervalID = setInterval(getNextIndex, 3000);
 }
 
 function handleCircles(event) {
-  clearInterval(intervalID);
   if (event.target.tagName === 'I') {
+    clearInterval(intervalID);
+    // for (var i = 0; i < $circleList.length; i++) {
+    //   console.dir(event.target.dataset);
+    //   // got the dataindex value of each clicked circle
+    // }
     var dataIndex = event.target.getAttribute('data-index');
     for (var i = 0; i < images.length; i++) {
       if (dataIndex === JSON.stringify(i)) {
         $img.setAttribute('src', images[i]);
-        $circles[i].classList.add('fa-solid');
-        $circles[i].classList.remove('fa-regular');
+        $circleList[i].classList.add('fa-solid');
+        $circleList[i].classList.remove('fa-regular');
       } else {
-        $circles[i].classList.add('fa-regular');
-        $circles[i].classList.remove('fa-solid');
+        $circleList[i].classList.add('fa-regular');
+        $circleList[i].classList.remove('fa-solid');
       }
     }
   }
+  index = 0;
+  intervalID = setInterval(getNextIndex, 3000);
 }
 
 function getPreviousIndex() {
-  if (index === 0) {
-    index = images.length - 1;
+  // console.log(index);
+  if (index !== 0) {
+    index--;
     $img.setAttribute('src', images[index]);
   } else {
-    index--;
+    index = images.length - 1;
     $img.setAttribute('src', images[index]);
   }
 }
 
 function getNextIndex() {
-  if (index === images.length - 1) {
-    index = 0;
-    $img.setAttribute('src', images[0]);
-    $circles[0].classList.add('fa-solid');
-    $circles[0].classList.remove('fa-regular');
-  } else {
+  // console.log(index);
+  if (index < images.length - 1) {
     index++;
     $img.setAttribute('src', images[index]);
-    $circles[index].classList.add('fa-solid');
-    $circles[index].classList.remove('fa-regular');
-    $circles[index - 1].add('fa-regular');
-    $circles[index - 1].remove('fa-solid');
+    $circleList[index].classList.add('fa-solid');
+    $circleList[index].classList.remove('fa-regular');
+    $circleList[index - 1].classList.remove('fa-solid');
+    $circleList[index - 1].classList.add('fa-regular');
+  } else {
+    index = 0;
+    $img.setAttribute('src', images[0]);
+    $circleList[0].classList.add('fa-solid');
+    $circleList[0].classList.remove('fa-regular');
+    $circleList[images.length - 1].classList.remove('fa-solid');
+    $circleList[images.length - 1].classList.add('fa-regular');
   }
 }
 
