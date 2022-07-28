@@ -12,27 +12,22 @@ $rightArrow.addEventListener('click', showNextImage);
 $circleContainer.addEventListener('click', handleCircles);
 
 function showPreviousImage(event) {
-  clearInterval(intervalID);
   getPreviousIndex();
-  intervalID = setInterval(getNextIndex, 3000);
+  setIndex();
 }
 
 function showNextImage(event) {
-  clearInterval(intervalID);
   getNextIndex();
-  intervalID = setInterval(getNextIndex, 3000);
+  setIndex();
 }
 
 function handleCircles(event) {
+  // debugger;
   if (event.target.tagName === 'I') {
-    clearInterval(intervalID);
-    // for (var i = 0; i < $circleList.length; i++) {
-    //   console.dir(event.target.dataset);
-    //   // got the dataindex value of each clicked circle
-    // }
-    var dataIndex = event.target.getAttribute('data-index');
-    for (var i = 0; i < images.length; i++) {
-      if (dataIndex === JSON.stringify(i)) {
+    setIndex();
+    for (var i = 0; i < $circleList.length; i++) {
+      var dataIndex = event.target.getAttribute('data-index');
+      if (JSON.stringify(i) === dataIndex) {
         $img.setAttribute('src', images[i]);
         $circleList[i].classList.add('fa-solid');
         $circleList[i].classList.remove('fa-regular');
@@ -42,8 +37,6 @@ function handleCircles(event) {
       }
     }
   }
-  index = 0;
-  intervalID = setInterval(getNextIndex, 3000);
 }
 
 function getPreviousIndex() {
@@ -80,4 +73,9 @@ function getNextIndex() {
     $circleList[images.length - 1].classList.remove('fa-solid');
     $circleList[images.length - 1].classList.add('fa-regular');
   }
+}
+
+function setIndex() {
+  clearInterval(intervalID);
+  intervalID = setInterval(getNextIndex, 3000);
 }
