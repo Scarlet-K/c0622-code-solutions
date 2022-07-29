@@ -22,11 +22,11 @@ function showNextImage(event) {
 }
 
 function handleCircles(event) {
-  // debugger;
   if (event.target.tagName === 'I') {
     setIndex();
+    var dataIndex = event.target.getAttribute('data-index');
+    index = dataIndex;
     for (var i = 0; i < $circleList.length; i++) {
-      var dataIndex = event.target.getAttribute('data-index');
       if (JSON.stringify(i) === dataIndex) {
         $img.setAttribute('src', images[i]);
         $circleList[i].classList.add('fa-solid');
