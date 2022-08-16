@@ -1,0 +1,500 @@
+  148  git switch string-manipulation-2
+  149  git status
+  150  git add .
+  151  git status
+  152  git commit -m "switched capitalize-words solution to one without split"
+  153  git push origin string-manipulation-2
+  154  git switch main
+  155  git branch javascript-local-storage
+  156  git switch javascript-local-storage
+  157  git status
+  158  git add .
+  159  git status
+  160  git commit -m "Completed javascript-local-storage exercise"
+  161  git push origin javascript-local-storage 
+  162  git status
+  163  git switch main
+  164  git pull origin main
+  165  git switch string-manipulation-2
+  166  git status
+  167  git add .
+  168  git status
+  169  git commit -m "Completed string-manipulation-2"
+  170  git push origin string-manipulation-2
+  171  git switch main
+  172  git branch array-manipulation-2
+  173  git switch array-manipulation-2
+  174  git status
+  175  git add .
+  176  git status
+  177  git commit -m "In progress"
+  178  git status
+  179  git status
+  180  git add .
+  181  git status
+  182  git commit -m "In progress: chunk"
+  183  git push origin array-manipulation-2
+  184  git status
+  185  git switch main
+  186  git branch object-manipulation-2
+  187  git switch object-manipulation-2
+  188  git status
+  189  git add .
+  190  git status
+  191  git commit -m "In progress"
+  192  git push origin object-manipulation-2
+  193  git status
+  194  git switch main
+  195  git switch string-manipulation-2
+  196  git status
+  197  git add .
+  198  git status
+  199  git commit -m "fixed swap-chars by replacing empty array and array methods with empty string and concatenation"
+  200  git push origin string-manipulation-2
+  201  git status
+  202  git switch main
+  203  git switch array-manipulation-2
+  204  git status
+  205  git status
+  206  git switch string-manipulation-2
+  207  git switch main
+  208  git switch array-manipulation-2
+  209  git status
+  210  git add .
+  211  git status
+  212  git commit -m "In progress"
+  213  git push origin array-manipulation-2 
+  214  git status
+  215  git add .
+  216  git status
+  217  git commit -m "In progress: chunk"
+  218  git push origin array-manipulation-2 
+  219  git status
+  220  git switch main
+  221  git switch object-manipulation-2
+  222  git status
+  223  git add .
+  224  git status
+  225  git commit -m "Completed object-manipulation-2"
+  226  git push origin object-manipulation-2 
+  227  git status
+  228  git switch main
+  229  git switch array-manipulation-2
+  230  git status
+  231  git add .
+  232  git status
+  233  git commit -m "In progress"
+  234  git push origin array-manipulation-2 
+  235  git status
+  236  git status
+  237  git status
+  238  git add .
+  239  git status
+  240  git commit -m "In progress"
+  241  git status
+  242  git push origin array-manipulation-2 
+  243  git switch main
+  244  git branch javascript-custom-methods
+  245  git switch javascript-custom-methods 
+  246  git status
+  247  git add .
+  248  git status
+  249  git commit -m "Completed javascript-custom-methods exercise."
+  250  git push origin javascript-custom-methods 
+  251  git switch main
+  252  git pull origin main
+  253  git branch javascript-this
+  254  git switch javascript-this
+  255  git status
+  256  git add .
+  257  git status
+  258  git commit -m "Completed javascript-this exercise."
+  259  git push origin javascript-this
+  260  git switch main
+  261  git pull origin main
+  262  git pull origin main
+  263  git branch javascript-prototypes
+  264  git switch javascript-prototypes 
+  265  git status
+  266  git add .
+  267  git status
+  268  git commit -m "Completed javascript-prototypes exercise."
+  269  git push origin javascript-prototypes 
+  270  git switch main
+  271  git pull origin main
+  272  git switch array-manipulation-2
+  273  git status
+  274  git add .
+  275  git status
+  276  git commit -m "Completed array-manipulation-2"
+  277  git push origin array-manipulation-2 
+  278  git status
+  279  git switch main
+  280  git branch string-manipulation-3
+  281  git switch string-manipulation-3
+  282  git status
+  283  git add .
+  284  git status
+  285  git commit -m "In progress"
+  286  git status
+  287  git push origin string-manipulation-3
+  288  git status
+  289  git status
+  290  git switch array-manipulation-2
+  291  git switch main
+  292  git branch javascript-constructors
+  293  git switch javascript-constructors 
+  294  git status
+  295  git add .
+  296  git status
+  297  git commit -m "Completed javascript-constructors exercise."
+  298  git push origin javascript-constructors 
+  299  git switch main
+  300  git branch javascript-bank
+  301  git switch javascript-bank
+  302  git status
+  303  git add .
+  304  git status
+  305  git commit -m "Completed javascript-bank challenge."
+  306  git push origin javascript-bank
+  307  git status
+  308  git switch main
+  309  git switch array-manipulation-2
+  310  git status
+  311  git add .
+  312  git status
+  313  git commit -m "fixed drop-right by stopping the loop at the desired length."
+  314  git push origin array-manipulation-2 
+  315  git switch main
+  316  git switch string-manipulation-3
+  317  git status
+  318  git add .
+  319  git status
+  320  git commit -m "In progress"
+  321  git push origin string-manipulation-3
+  322  git switch main
+  323  git pull origin main
+  324  git pull origin main
+  325  git branch javascript-timers
+  326  git switch javascript-timers
+  327  git status
+  328  git add .
+  329  git status
+  330  git commit -m "Completed javascript-timers exercise."
+  331  git push origin javascript-timers
+  332  git status
+  333  git add .
+  334  git status
+  335  git commit -m "fixed interval exercise."
+  336  git push origin javascript-timers
+  337  git status
+  338  git switch main
+  339  git branch javascript-carousel
+  340  git switch javascript-carousel
+  341  git status
+  342  git add .
+  343  git status
+  344  git status
+  345  git commit -m "In progress"
+  346  git status
+  347  git push origin javascript-carousel
+  348  git status
+  349  git status
+  350  git add .
+  351  git status
+  352  git commit -m "In progress: changing circles"
+  353  git status
+  354  git push origin javascript-carousel
+  355  git status
+  356  git add .
+  357  git status
+  358  git commit -m "In progress: arrows and dots bug + dothandler and interval bug"
+  359  git push origin javascript-carousel 
+  360  git status
+  361  git add .
+  362  git status
+  363  git commit -m "In progress: added previousimage button + circle matchup function"
+  364  git status
+  365  git push origin javascript-carousel 
+  366  git status
+  367  git switch main
+  368  git branch prep-interview-qs
+  369  git switch prep-interview-qs
+  370  git status
+  371  git add.
+  372  git add .
+  373  git status
+  374  git commit -m "prep-interview-qs"
+  375  git switch main
+  376  git switch javascript-carousel
+  377  git status
+  378  git add .
+  379  git status
+  380  git commit -m "In progress: fixing circles"
+  381  git status
+  382  git push origin javascript-carousel 
+  383  git switch main
+  384  git branch http-messages
+  385  git switch http-messages 
+  386  http
+  387  /c0622-code-solutions
+  388  http GET https://example.com
+  389  http GET --verbose https://example.com
+  390  http --verbose http://example.com
+  391  http --verbose https://example.com
+  392  http --verbose /example.com
+  393  http --verbose example.com
+  394  http --verbose --verbose example.com
+  395  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  396  http --body GET https://example.com > http-messages/index.html
+  397  git status
+  398  git add .
+  399  git status
+  400  git commit -m "Completed http-messages exercise."
+  401  git push origin http-messages 
+  402  git status
+  403  git switch main
+  404  git pull origin main
+  405  git branch javascript-ajax
+  406  git switch javascript-ajax
+  407  git status
+  408  git add .
+  409  git status
+  410  git commit -m "Completed javascript-ajax exercise."
+  411  git status
+  412  git push origin javascript-ajax 
+  413  git status
+  414  git status
+  415  git add .
+  416  git commit -m "fixed xhr.responseType to 'json' from 'JSON'"
+  417  git push origin javascript-ajax 
+  418  git switch main
+  419  git pull origin main
+  420  http GET https://api.nasa.gov/planetary/apod
+  421  http GET https://api.edamam.com/api/recipes/v2 q==basil type==public app_id==514b8dc5 app_key==
+  422  d8323d109e2cffd7144a6eb154c8a38d cuisineType==Asian
+  423  http GET https://api.edamam.com/api/recipes/v2 q==basil type==public app_id==df3e88f3 app_key==
+  424  5ebb2ae7b03594aecf898da991aa6a97 	
+  425  git switch javascript-carousel 
+  426  git status
+  427  git add .
+  428  git status
+  429  git commit -m "Completed javascript-carousel challenge"
+  430  git push origin javascript-carousel 
+  431  git switch main
+  432  http GET https://api.edamam.com/api/recipes/v2 q==chicken type==public app_id==df3e88f3 app_key==
+  433  5ebb2ae7b03594aecf898da991aa6a97	—
+  434  http GET https://api.edamam.com/api/recipes/v2 q==chicken type==public app_id==df3e88f3 app_key==2ea86554506379c9de6ffdfa2c9e479f
+  435  http GET https://api.edamam.com/api/recipes/v2 q==basil type==public app_id==df3e88f3 app_key==2ea86554506379c9de6ffdfa2c9e479f cuisineType==Asian
+  436  http GET https://api.edamam.com/api/recipes/v2 q==basil type==public app_id==df3e88f3 app_key==2ea86554506379c9de6ffdfa2c9e479f cuisineType==Asian diet==high-protein mealType==dinner dishType==starter
+  437  git switch string-manipulation-3
+  438  git status
+  439  git switch main
+  440  git switch javascript-carousel 
+  441  git switch main
+  442  git branch es6-const-let
+  443  git switch es6-const-let 
+  444  git status
+  445  git add .
+  446  git status
+  447  git commit -m "Completed es6-const-let exercise."
+  448  git push origin es6-const-let 
+  449  git status
+  450  git add .
+  451  git status
+  452  git commit -m "deleted unnecessary js file."
+  453  git push origin es6-const-let 
+  454  git status
+  455  git switch main
+  456  git branch es6-template-literals
+  457  git switch es6-template-literals 
+  458  git status
+  459  git status
+  460  git add .
+  461  git status
+  462  git commit -m "Completed es6-template-literals exercise."
+  463  git push origin es6-template-literals 
+  464  git status
+  465  git switch 
+  466  git swith main
+  467  git switch main
+  468  git branch es6-destructuring
+  469  git switch es6-destructuring 
+  470  git status
+  471  git add .
+  472  git status
+  473  git commit -m "Completed es6-destructuring exercise."
+  474  git push origin es6-destructuring 
+  475  git switch main
+  476  git branch es6-arrow-functions
+  477  git switch es6-arrow-functions 
+  478  git status
+  479  git add .
+  480  git status
+  481  git commit -m "In Progress: arrow-functions"
+  482  git status
+  483  git add .
+  484  git status
+  485  git commit -m "Completed es6-arrow-functions exercise."
+  486  git push origin es6-arrow-functions 
+  487  git switch  main
+  488  git pull origin main
+  489  git switch es6-arrow-functions 
+  490  git switch mainn
+  491  git swith main
+  492  git switch main
+  493  man 
+  494  man ls
+  495  git branch command-line-basics
+  496  git switch command-line-basics 
+  497  cd command-line-basics
+  498  man man
+  499  man man
+  500  cat
+  501  cd command-line-basics
+  502  man cat
+  503  cat laziness.txt
+  504  cat laziness.txt, impatience.txt, hubris.txt
+  505  man cat
+  506  cat laziness.txt impatience.txt hubris.txt
+  507  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  508  cat three-virtues.txt
+  509  man cat
+  510  man ls
+  511  ls lfz-staff/
+  512  ls -a lfz-staff/
+  513  man ls
+  514  ls -f lfz-staff/
+  515  man ls
+  516  ls -F lfz-staff/
+  517  man ls
+  518  man ls -aF lfz-staff/ > lfz-staff/content.txt
+  519  ls -aF lfz-staff > lfz-staff/content.txt
+  520  cat lfz-staff/content.txt
+  521  ls -aF lfz-staff > lfz-staff/contents.txt
+  522  cat lfz-staff/contents.txt
+  523  man pwd
+  524  pwd > i-was-here.txt
+  525  ls pwd
+  526  ls i-was-here.txt
+  527  man ls
+  528  ls -aF pwd
+  529  ls -aF i-was-here.txt
+  530  man ls
+  531  ls -d pwd
+  532  ls -d i-was-here.txt
+  533  man ls
+  534  ls -a i-was-here.txt
+  535  cat i-was-here.txt
+  536  pwd
+  537  ls /workspaces/c0622-code-solutions/command-line-basics
+  538  cat i-was-here.txt
+  539  man echo
+  540  man echo
+  541  echo 'Hello, World!'
+  542  echo 'Hello, World!' > hello.txt
+  543  ls /workspaces/c0622-code-solutions/command-line-basics
+  544  cat hello.txt
+  545  man touch
+  546  man touch
+  547  touch tag-youre-it.txt
+  548  touch snoot/boop.txt
+  549  ls snoot/
+  550  ls tag-youre-it
+  551  ls /workspaces/c0622-code-solutions/command-line-basics
+  552  man mkdir
+  553  ls hello/
+  554  ls kill-me/
+  555  ls lfz-staff/
+  556  ls pokiemans/
+  557  ls lol
+  558  cat lol.txt
+  559  cat three-virtues.txt
+  560  man mkdir
+  561  mkdir -p parent
+  562  ls parent/
+  563  ls parent
+  564  mkdir parent
+  565  ls parent/
+  566  mkdir -p child
+  567  ls parent/
+  568  man mkdir
+  569  mkdir -p parent
+  570  ls parent/
+  571  mkdir parent
+  572  mkdir -p parent/
+  573  ls parent/
+  574  ls parent
+  575  ls /workspaces/c0622-code-solutions/command-line-basics
+  576  ls parent/
+  577  ls child/
+  578  man mkdir
+  579  man mkdir
+  580  mkdir -p --parent/ child
+  581  mkdir -p parent child
+  582  ls parent/
+  583  ls parent/
+  584  ls child/
+  585  mkdir parent
+  586  ls parent > child
+  587  ls parent/
+  588  ls parent > mkdir child
+  589  ls parent/
+  590  mkdir -p grandchild
+  591  ls parent
+  592  /workspaces/c0622-code-solutions/command-line-basics
+  593  ls /workspaces/c0622-code-solutions/command-line-basics
+  594  man mv
+  595  mv pokiemans pokemon
+  596  ls /workspaces/c0622-code-solutions/command-line-basics
+  597  man rm
+  598  man rm
+  599  rm lol.txt
+  600  ls /workspaces/c0622-code-solutions/command-line-basics
+  601  rm grandchild/
+  602  rm content.txt
+  603  rm mkdir
+  604  ls /workspaces/c0622-code-solutions/command-line-basics
+  605  rm -r kill-me/
+  606  ls /workspaces/c0622-code-solutions/command-line-basics
+  607  rm -r granchild/
+  608  rm -r grandchild/
+  609  ls /workspaces/c0622-code-solutions/command-line-basics
+  610  rm -r child/
+  611  ls /workspaces/c0622-code-solutions/command-line-basics
+  612  rm -r parent/
+  613  ls /workspaces/c0622-code-solutions/command-line-basics
+  614  man cp
+  615  man cp
+  616  cp and-then.txt no-and-then.txt
+  617  ls /workspaces/c0622-code-solutions/command-line-basics
+  618  cat and-then.txt
+  619  cat no-and-then.txt
+  620  man history
+  621  history
+  622  mkdir parent/child/granchild
+  623  ls /workspaces/c0622-code-solutions/command-line-basics
+  624  ls parent/
+  625  mkdir parent
+  626  ls /workspaces/c0622-code-solutions/command-line-basics
+  627  mkdir -p parent child grandchild
+  628  ls /workspaces/c0622-code-solutions/command-line-basics
+  629  touch parent/child/granchild/.gitkeep 
+  630  ls /workspaces/c0622-code-solutions/command-line-basics
+  631  ls -a
+  632  -a
+  633  ls -a
+  634  ls -a child
+  635  rm -r parent/
+  636  ls /workspaces/c0622-code-solutions/command-line-basics
+  637  rm -r child/
+  638  ls /workspaces/c0622-code-solutions/command-line-basics
+  639  rm -r grandchild/
+  640  ls /workspaces/c0622-code-solutions/command-line-basics
+  641  ls -a
+  642  mkdir -p parent/child/grandchild
+  643  ls /workspaces/c0622-code-solutions/command-line-basics
+  644  touch parent/child/grandchild/.gitkeep
+  645  ls -a
+  646  history
+  647  history > command-history.txt
