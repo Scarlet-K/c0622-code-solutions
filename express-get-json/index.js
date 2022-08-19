@@ -21,15 +21,28 @@ const grades = {
   }
 };
 
-app.listen(3000, () => {
-  // eslint-disable-next-line no-console
-  console.log('Express server listening on port 3000!');
-});
+// app.use((req, res, next) => {
+//   if (req.method !== 'GET' || req.url !== '/api/grades') {
+//     next();
+//   } else {
+//     const gradesArray = [];
+//     for (const id in grades) {
+//       gradeArray.push(grades[id]);
+//     }
+//     res.json(gradeArray);
+//   }
+// });
+// above function is the same as the below function, just longer
 
 app.get('/api/grades', (req, res) => {
   const gradeArray = [];
-  for (const number in grades) {
-    gradeArray.push(grades[number]);
+  for (const id in grades) {
+    gradeArray.push(grades[id]);
   }
   res.json(gradeArray);
+});
+
+app.listen(3000, () => {
+  // eslint-disable-next-line no-console
+  console.log('Express server listening on port 3000!');
 });
