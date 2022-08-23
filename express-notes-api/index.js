@@ -38,7 +38,7 @@ app.post('/api/notes', (req, res) => {
   req.body.id = data.nextId;
   data.notes[data.nextId] = req.body;
   data.nextId++;
-  const newData = JSON.stringify(data, null, ' ');
+  const newData = JSON.stringify(data, null, '  ');
   fs.writeFile('data.json', newData, err => {
     if (err) {
       console.error(err);
