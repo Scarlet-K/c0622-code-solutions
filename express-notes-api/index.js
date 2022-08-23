@@ -18,8 +18,7 @@ app.get('/api/notes', (req, res) => {
 app.get('/api/notes/:id', (req, res) => {
   const id = req.params.id;
   if (!Number.isInteger(id) && id < 0) {
-    const errNotPositive = { error: `id must be a postitive integer ${id}` };
-    res.status(404).json(errNotPositive);
+    res.status(400).json({ error: 'id must be a postitive integer' });
   }
   if (data.notes[id]) {
     res.status(200).json(data.notes[id]);
@@ -31,54 +30,64 @@ app.get('/api/notes/:id', (req, res) => {
 app.use(express.json());
 
 app.post('/api/notes', (req, res) => {
-  const newNote = {};
-  if (req.body.content) {
-    newNote.content = req.body.content;
-    newNote.id = data.nextId; // { content: saldkfjsfj, id: 11}
-    data.notes[data.nextId] = newNote; // made the newNote a property of data
-    data.nextId += 1;
-    const newData = JSON.stringify(data, null, ' '); // stringifying the new data
-    fs.writeFile('boop/data.json', newData, err => { // checking if the file path is valid
+  if (!req.body.content) {
+    res.status(400).json({ error: 'content is a required field' });
+  }
+  req.body.id = data.nextId;
+  data.notes[data.nextId] = req.body;
+  data.nextId++;
+  const newData = JSON.stringify(data, null, ' ');
+  fs.writeFile('data.json', newData, err => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occured' });
+    }
+    res.status(201).json(data.notes[req.body.id]);
+  });
+});
+
+app.delete('/api/notes/:id', (req, res) => {
+  const id = req.params.id;
+  if (!Number.isInteger(id) && id < 0) {
+    res.status(400).json({ error: 'id must be a postitive integer' });
+  }
+  if (data.notes[id]) {
+    delete data.notes[id];
+    const newData = JSON.stringify(data, null, ' ');
+    fs.writeFile('data.json', newData, err => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error occured' });
-        delete newData.notes[data.nextId];
-        data.nextId -= 1;
-      } else {
-        // data.notes[data.nextId] = newNote;
-        // data.nextId += 1;
-        // const newData = JSON.stringify(data, null, ' ');
-        res.status(201).json(newNote);
       }
+      res.status(204).send();
     });
   } else {
+    res.status(404).json({ error: `cannot find note with id ${id}` });
+  }
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  const id = req.params.id;
+  if (!Number.isInteger(id) && id < 0) {
+    res.status(400).json({ error: 'id must be a postitive integer' });
+  } else if (data.notes[id] === undefined) {
+    res.status(404).json({ error: `cannot find note with id ${id}` });
+  } else if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
   }
+  req.body.id = parseInt(id);
+  data.notes[id] = req.body;
+  const newData = JSON.stringify(data, null, ' ');
+  fs.writeFile('data.json', newData, err => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occured' });
+    }
+    res.status(200).json(data.notes[req.body.id]);
+  });
 });
 
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Express server listening on port 3000');
 });
-
-// {
-//   "nextId": 10,
-//     "notes": {
-//     "2": {
-//       "id": 2,
-//       "content": "The event loop, this, closures, and prototypal inheritance are special about JavaScript."
-//     },
-//     "5": {
-//       "id": 5,
-//       "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
-//     },
-//     "6": {
-//       "id": 6,
-//       "content": "A closure is formed when a function retains access to variables in its lexical scope."
-//     },
-//     "9": {
-//       "id": 9,
-//       "content": "Inertia is a property of matter."
-//     }
-//   }
-// }
