@@ -57,7 +57,7 @@ app.delete('/api/notes/:id', (req, res) => {
   }
   if (data.notes[id]) {
     delete data.notes[id];
-    const newData = JSON.stringify(data, null, ' ');
+    const newData = JSON.stringify(data, null, '  ');
     fs.writeFile('data.json', newData, err => {
       if (err) {
         console.error(err);
@@ -84,7 +84,7 @@ app.put('/api/notes/:id', (req, res) => {
   }
   req.body.id = parseInt(id);
   data.notes[id] = req.body;
-  const newData = JSON.stringify(data, null, ' ');
+  const newData = JSON.stringify(data, null, '  ');
   fs.writeFile('data.json', newData, err => {
     if (err) {
       console.error(err);
