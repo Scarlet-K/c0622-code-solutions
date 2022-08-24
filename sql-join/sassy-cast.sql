@@ -3,4 +3,4 @@ select "actors"."firstName",
   from "castMembers"
   join "actors" using ("actorId")
   join "films" using ("filmId")
-  where "films"."title" = 'Jersey Sassy';
+  where "title" = 'Jersey Sassy';

@@ -3,4 +3,4 @@ select "films"."releaseYear",
   from "filmGenre"
   join "films" using ("filmId")
   join "genres" using ("genreId")
-  where "films"."title" = 'Boogie Amelie';
+  where "title" = 'Boogie Amelie';
