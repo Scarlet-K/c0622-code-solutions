@@ -10,12 +10,11 @@
 // After going over all the characters in both first and second string, we should have two objects
 // These two objects should have all characters as their properties and values that match how many of the characters appear in the string
 // Go over all the properties of the two objects(which are characters in the strings)
-// Compare the two objects by checking the properties and values
-// If all the values AND values match, return true
+// Compare the two objects by checking their values at the same property
+// If all the properties AND its values match, return true
 // Else return false
 
 function isAnagram(firstString, secondString) {
-  // debugger;
   var newFirst = firstString.replaceAll(' ', '');
   var newSecond = secondString.replaceAll(' ', '');
   var first = {};
@@ -35,11 +34,13 @@ function isAnagram(firstString, secondString) {
     } else {
       second[newSecond[i]] = 1;
     }
-    if (first[newFirst[i]] === second[newSecond[i]]) {
+  }
+  for (var char in first) {
+    if (first[char] === second[char]) {
       result = true;
     } else {
       result = false;
-      return false;
+      return result;
     }
   }
   return result;
