@@ -1,2 +1,2 @@
-select avg("replacementCost") as "averagePrice"
+select avg("replacementCost") as "Average Replacement Cost"
   from "films";

@@ -1,2 +1,2 @@
-select max("inventoryId") as "totalDVDs"
+select max("inventoryId") as "TotalDVDs"
   from "inventory";
