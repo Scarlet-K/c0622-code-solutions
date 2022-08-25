@@ -8,8 +8,10 @@
 // Restart going over the characters from the character after the whitespace
 // Repeat until at last char
 // Return newString
+// PROBLEM: k is being reset to 20, which is the last index
 
 function reverseWords(string) {
+  // debugger;
   var newString = '';
   for (var i = 0; i < string.length; i++) {
     if (string[i] === ' ') {
