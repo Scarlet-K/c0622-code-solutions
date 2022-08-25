@@ -62,8 +62,9 @@ app.delete('/api/notes/:id', (req, res) => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error occured' });
+      } else {
+        res.status(204).send();
       }
-      res.status(204).send();
     });
   } else {
     res.status(404).json({ error: `cannot find note with id ${id}` });
