@@ -1,27 +1,27 @@
 /* exported reverseWords */
 
 // Create an empty string
-// Go over the characters in the string
-// Stop if the character is a whitespace OR the last char
-// Go over the character in the string backwards until the current char is a whitespace OR the first char
-// Add each current character to the empty string
-// Restart going over the characters from the character after the whitespace
+// Go over the characters in the string (outer loop)
+// Stop if the character is a whitespace OR the last char (outer loop)
+// Go over the character in the string backwards and add the current char to the empty string (inner loop)
+// Set the inner loop to start where we stopped in the outer loop
+// IF the next char will be a whitespace OR the first char of the string stop (inner loop)
+// Restart going over the characters (outer loop)
 // Repeat until at last char
 // Return newString
-// PROBLEM: k is being reset to 20, which is the last index
 
 function reverseWords(string) {
-  // debugger;
+  var spaceString = string + ' ';
   var newString = '';
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] === ' ') {
-      for (var k = string.length - 1; k >= 0; k--) {
-        newString += string[k];
-        if (string[k] === ' ') {
+  for (var i = 0; i < spaceString.length; i++) {
+    if ((spaceString[i] === ' ') || (i === spaceString.length - 1)) {
+      for (var k = i; ; k--) {
+        newString += spaceString[k];
+        if ((spaceString[k - 1] === ' ') || (k <= 0)) {
           break;
         }
       }
     }
   }
-  return newString;
+  return newString.trimStart();
 }
