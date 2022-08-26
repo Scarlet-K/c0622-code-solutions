@@ -77,7 +77,7 @@ app.post('/api/grades', (req, res) => {
       error: 'course is a required field'
     });
     return;
-  } else if ((!Number.isInteger(score)) || (score < 0) || (score > 100)) {
+  } else if ((!Number.isInteger(score)) || !(score >= 0) || !(score <= 100)) {
     res.status(400).json({
       error: 'score must be a positive integer from 0 to 100'
     });
