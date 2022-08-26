@@ -1,0 +1,37 @@
+.container {
+  margin: auto;
+}
+
+.font {
+  font-family: "Courier Prime", monospace;
+}
+
+.row {
+  display: flex;
+  min-height: 100vh;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.border-bottom {
+  border-bottom: solid black 0.2rem;
+}
+
+.correct {
+  color: rgb(36 250 57);
+}
+
+.incorrect {
+  color: red;
+  border-bottom: solid red 0.2rem;
+}
