@@ -1,9 +1,11 @@
 import { createElement, noop } from '../lib';
+// index.js = ../lib since it is a directory
 import TodoList from './todo-list';
 import TodoForm from './todo-form';
 
 export default class TodoApp {
   constructor(container, nextId, todos, onUpdate = noop) {
+    // the fourth parameter has a default value of 'noop' if there isn't any fourth parameter passed into this function
     this.container = container;
     this.todos = todos;
     this.nextId = nextId;
