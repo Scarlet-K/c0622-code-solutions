@@ -3,7 +3,7 @@
   min-height: 10vh;
 }
 
-.container {
+.container-on {
   background-color: green;
   border-radius: 5rem;
   width: 6rem;
@@ -25,14 +25,24 @@
   background-color: white;
 }
 
+.transform {
+  transform: translateX(3rem);
+}
+
+.transition {
+  transition: transform 0.5s;
+}
+
 .col-half {
   width: 50%;
 }
 
 .align-center {
-  align-content: center;
+  align-items: center;
 }
 
-.text-center {
-  text-align: center;
+.font {
+  font-family: Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: 0.5rem;
 }
