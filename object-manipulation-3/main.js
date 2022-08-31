@@ -19,6 +19,10 @@ var players = [
   }
 ];
 
+// function createPlayers() {
+
+// }
+
 var deck = [
   { rank: 'Ace', suit: 'clubs' }, { rank: 2, suit: 'clubs' }, { rank: 3, suit: 'clubs' },
   { rank: 4, suit: 'clubs' }, { rank: 5, suit: 'clubs' },
@@ -45,11 +49,32 @@ var deck = [
   { rank: 10, suit: 'spades' }, { rank: 'Jack', suit: 'spades' }
 ];
 
+// var rank = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 'Jack', 'Queen', 'King'];
+// var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
+
+// function createDeck() {
+
+// }
+
 var shuffledDeck = _.shuffle(deck);
 console.log(shuffledDeck);
 
-// for (var i = 0; i < players.length; i++) {
-//   players[i].hand.push(shuffledDeck[i], shuffledDeck[i + 1]);
+// Each player receives 2 cards that are unique
+function dealCards() {
+  var card = 0;
+  for (var i = 0; i < players.length; i++) {
+    players[i].hand.push(shuffledDeck[card]);
+    card++;
+    players[i].hand.push(shuffledDeck[card]);
+    card++;
+    // findWinner();
+  }
+}
+
+// function findWinner() {
+//   if (players[i].hand[i] === )
 // }
+
+dealCards();
 
 console.log(players);
