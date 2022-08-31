@@ -1,0 +1,38 @@
+.row {
+  display: flex;
+  min-height: 10vh;
+}
+
+.container {
+  background-color: green;
+  border-radius: 5rem;
+  width: 6rem;
+  height: 3rem;
+}
+
+.container-off {
+  background-color: lightgrey;
+  border-radius: 5rem;
+  width: 6rem;
+  height: 3rem;
+}
+
+.switch {
+  border-radius: 5rem;
+  width: 3rem;
+  height: 3rem;
+  border: lightgrey solid 0.15rem;
+  background-color: white;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
