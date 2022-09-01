@@ -19,6 +19,9 @@ class RegistrationForm extends React.Component {
     });
   }
 
+  // this.setState = { [event.target.name] : event.target.value };
+  // another way to shorten the code!
+
   handlePasswordChange(event) {
     this.setState({
       password: event.target.value
@@ -32,12 +35,12 @@ class RegistrationForm extends React.Component {
 
   render() {
     return (
-      <form>
-        <label>Username</label>
-        <input type='text' value={this.state.username} onChange={this.handleUsernameChange}></input>
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="username">Username</label>
+        <input name="username" id="username" type='text' value={this.state.username} onChange={this.handleUsernameChange}></input>
         <label>Password</label>
         <input type='password' value={this.state.password} onChange={this.handlePasswordChange}></input>
-        <button onClick={this.handleSubmit}>Sign Up</button>
+        <button>Sign Up</button>
       </form>
     );
   }
