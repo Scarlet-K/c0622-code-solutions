@@ -4,15 +4,15 @@ import ReactDOM from 'react-dom/client';
 const topics = [
   {
     language: 'Hypertext Markup Language',
-    details: 'HTML'
+    detail: 'HTML detail'
   },
   {
     language: 'Cascading Style Sheets',
-    details: 'CSS'
+    detail: 'CSS detail'
   },
   {
     language: 'JavaScript',
-    details: 'JS'
+    detail: 'JS detail'
   }
 ];
 
@@ -22,12 +22,32 @@ class Accordion extends React.Component {
     this.state = {
       isClicked: false
     };
+    this.showDetail = this.showDetail.bind(this);
+  }
+
+  showDetail(event) {
+    this.setState({
+      isClicked: true
+    });
   }
 
   render() {
-    const accordion = topics.map((topic, index) =>
-      <li key={index} className='topic'>{topic.language}</li>
-    );
+    const accordion = topics.map((topic, index) => {
+      if (!this.showDetail) { // what can I check to make sure the correct detail is shown?
+        return (
+        <li key={index} onClick={this.showDetail}>
+          <p className='topic'>{topic.language}</p>
+          <p className='detail'>{topic.detail}</p>
+        </li>
+        );
+      }
+      return (
+        <li key={index} onClick={this.showDetail}>
+          <p className='topic'>{topic.language}</p>
+          <p className='detail'>{topic.detail}</p>
+        </li>
+      );
+    });
     return (
     <ul>{accordion}</ul>
     );

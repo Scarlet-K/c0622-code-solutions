@@ -1,4 +1,4 @@
-li.topic {
+.topic {
   border: solid black 0.2rem;
   margin: 0.2rem;
   padding: 1rem;
@@ -8,7 +8,21 @@ li.topic {
   background-color: lightgray;
 }
 
+.detail {
+  border: solid black 0.2rem;
+  margin: 0.2rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
 ul {
   list-style: none;
   padding: 0;
+}
+
+.hidden {
+  display: none;
 }
