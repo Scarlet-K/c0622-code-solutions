@@ -1,0 +1,14 @@
+li.topic {
+  border: solid black 0.2rem;
+  margin: 0.2rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: lightgray;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
