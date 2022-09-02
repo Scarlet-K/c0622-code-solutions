@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// const topics = [
-//   {
-//     language: 'Hypertext Markup Language',
-//     details: 'HTML'
-//   },
-//   {
-//     language: 'Cascading Style Sheets',
-//     details: 'CSS'
-//   },
-//   {
-//     language: 'JavaScript',
-//     details: 'JS'
-//   }
-// ];
+const topics = [
+  {
+    language: 'Hypertext Markup Language',
+    details: 'HTML'
+  },
+  {
+    language: 'Cascading Style Sheets',
+    details: 'CSS'
+  },
+  {
+    language: 'JavaScript',
+    details: 'JS'
+  }
+];
 
 class Accordion extends React.Component {
   constructor(props) {
@@ -22,25 +22,14 @@ class Accordion extends React.Component {
     this.state = {
       isClicked: false
     };
-    // this.createAccordion = this.createAccordion.bind(this);
   }
 
-  // createAccordion(props) {
-  //   const topics = props.topicsArray.map(topic =>
-  //     <li key={topic.index} className='topic'>{topic.language}</li>
-  //   );
-  //   return (
-  //     <ul>{topics}</ul>
-  //   );
-  // }
-
   render() {
+    const accordion = topics.map((topic, index) =>
+      <li key={index} className='topic'>{topic.language}</li>
+    );
     return (
-    <ul>
-      <li className='topic'>Hypertext Markup Language</li>
-      <li className='topic'>Cascading Style Sheets</li>
-      <li className='topic'>JavaScript</li>
-    </ul>
+    <ul>{accordion}</ul>
     );
   }
 }
