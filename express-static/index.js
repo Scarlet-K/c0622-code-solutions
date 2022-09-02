@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const joined = path.join(__dirname, 'public');
 console.log('joined:', joined);
-const server = express.static('public');
+const server = express.static(joined);
 console.log('server:', server);
 
 app.use(server);
