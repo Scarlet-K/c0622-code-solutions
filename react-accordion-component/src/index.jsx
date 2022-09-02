@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom/client';
 
 // const topics = [
 //   {
-//     id: 1,
 //     language: 'Hypertext Markup Language',
 //     details: 'HTML'
 //   },
 //   {
-//     id: 2,
 //     language: 'Cascading Style Sheets',
 //     details: 'CSS'
 //   },
 //   {
-//     id: 3,
 //     language: 'JavaScript',
 //     details: 'JS'
 //   }
@@ -30,7 +27,7 @@ class Accordion extends React.Component {
 
   // createAccordion(props) {
   //   const topics = props.topicsArray.map(topic =>
-  //     <li key={topic.id} className='topic'>{topic.language}</li>
+  //     <li key={topic.index} className='topic'>{topic.language}</li>
   //   );
   //   return (
   //     <ul>{topics}</ul>
