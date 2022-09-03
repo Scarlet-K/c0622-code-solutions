@@ -6,15 +6,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       users: [],
-      isLoading: true
+      isLoading: true // flag = a switch
     };
   }
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(data => this.setState({ users: data, isLoading: false }));
-    // .then(state => this.setState({ isLoading: false }));
+      .then(data => this.setState({
+        users: data,
+        isLoading: false
+      }));
+    // .catch(err => console.err('Fetch failed!', err));
   }
 
   render() {
