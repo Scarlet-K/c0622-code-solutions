@@ -1,23 +1,27 @@
 /* exported reverseWords */
 
-// Create an empty string
-// Go over the characters in the string (outer loop)
-// Stop if the character is a whitespace OR the last char (outer loop)
-// Go over the character in the string backwards and add the current char to the empty string (inner loop)
-// Set the inner loop to start where we stopped in the outer loop
-// IF the next char will be a whitespace OR the first char of the string stop (inner loop)
-// Restart going over the characters (outer loop)
-// Repeat until at last char
+// create an empty string
+// start a loop (outer loop)
+// go over the characters in the string
+// if the character is a whitespace
+//  start ANOTHER loop (inner loop) at the current index of the outer loop
+//  go over the characters backwards
+//  if the next char will be a whitespace
+//    break out from current iteration (of BOTH loops since this one is nested)
+//  else
+//    add the current chars to the empty string
+// Restart going over the characters at the next index (outer loop)
+// Repeat until at last character
 // Return newString
 
 function reverseWords(string) {
   var spaceString = string + ' ';
   var newString = '';
   for (var i = 0; i < spaceString.length; i++) {
-    if ((spaceString[i] === ' ') || (i === spaceString.length - 1)) {
-      for (var k = i; ; k--) {
+    if (spaceString[i] === ' ') {
+      for (var k = i; k >= 0; k--) {
         newString += spaceString[k];
-        if ((spaceString[k - 1] === ' ') || (k <= 0)) {
+        if ((spaceString[k - 1] === ' ')) {
           break;
         }
       }

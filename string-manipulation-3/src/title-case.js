@@ -1,9 +1,12 @@
 /* exported titleCase */
 
-// var minor = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
+// var minor = [
+//   'and', 'or', 'nor', 'but',
+//   'a', 'an', 'the',
+//   'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'
+// ];
 
 function titleCase(title) {
-  // debugger;
   // var newTitle = '';
   var lowerCased = title.toLowerCase();
   var words = lowerCased.split(' ');
