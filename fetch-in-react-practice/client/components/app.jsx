@@ -14,6 +14,11 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    fetch('/api/todos')
+      .then(response => response.json())
+      .then(response => this.setState({
+        todos: response
+      }));
     /**
      * Use fetch to send a GET request to `/api/todos`.
      * Then 😉, once the response JSON is received and parsed,
@@ -22,6 +27,9 @@ export default class App extends React.Component {
   }
 
   addTodo(newTodo) {
+    // fetch('/api/todos', { method: 'SEND' })
+    //   .then(response => response.json());
+    //   .then(response => )
     /**
     * Use fetch to send a POST request to `/api/todos`.
     * Then 😉, once the response JSON is received and parsed,
