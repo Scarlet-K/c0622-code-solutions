@@ -27,6 +27,13 @@ export default class App extends React.Component {
   }
 
   addTodo(newTodo) {
+    // const req = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(newTodo)
+    // }
     fetch('/api/todos', {
       method: 'POST',
       headers: {
@@ -38,6 +45,7 @@ export default class App extends React.Component {
       .then(todo => {
         const copyArray = this.state.todos.concat();
         copyArray.push(todo);
+        // const copyArray = this.state.todos.concat(todo);
         this.setState({
           todos: copyArray
         });
@@ -75,10 +83,15 @@ export default class App extends React.Component {
       },
       body: JSON.stringify(array[index])
     })
+    // header is to make sure our body doesn't get ignored by express
       .then(response => response.json())
       .then(newTodo => {
         const copyArray = this.state.todos.concat();
         copyArray.splice(index, 1, newTodo);
+        // const newTodosArray = this.state.todos.map(originalTodo => {
+        //  return originalTodo.todoId === todoId ? updatedTodo : originalTodo;
+        // })
+        // this.setState({ todos: newTodosArray });
         this.setState({
           todos: copyArray
         });
