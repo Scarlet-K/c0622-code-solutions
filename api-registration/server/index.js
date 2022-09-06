@@ -28,23 +28,21 @@ app.post('/api/auth/sign-up', (req, res, next) => {
   argon2
     .hash(password)
     .then(hashedPassword => {
-      params.push(hashedPassword);
-    })
-    .catch(err => {
-      console.error(err);
-    });
-  const sql = `
-  insert into "users" ("username", "hashedPassword")
-  values ($1, $2)
-  returning*
-  `;
-  const params = [username];
-  db.query(sql, params)
-    .then(result => {
-      const [userId, username, createdAt] = result.rows;
-      res.status(201).json(userId, username, createdAt);
+      const sql = `
+        insert into "users" ("username", "hashedPassword")
+        values ($1, $2)
+        returning "userId", "username", "createdAt"
+       `;
+      const params = [username, hashedPassword];
+      db.query(sql, params)
+        .then(result => {
+          const [user] = result.rows;
+          res.status(201).json(user);
+        })
+        .catch(err => next(err));
     })
     .catch(err => next(err));
+
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉
@@ -54,7 +52,7 @@ app.post('/api/auth/sign-up', (req, res, next) => {
    *   Catch any errors.
    * Catch any errors.
    *
-   * Hint: Insert statements can include a `returning` clause to retrieve the insterted row(s).
+   * Hint: Insert statements can include a `returning` clause to retrieve the inserted row(s).
    */
 
 });
