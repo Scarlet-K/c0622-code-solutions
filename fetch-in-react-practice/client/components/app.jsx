@@ -61,6 +61,28 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
+    const array = this.state.todos;
+    const index = array.findIndex(todo => todo.todoId === todoId);
+    const status = array[index].isCompleted;
+    const newStatus = { isCompleted: !status };
+    if (array[index].todoId === todoId) {
+      array[index] = newStatus;
+    }
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(array[index])
+    })
+      .then(response => response.json())
+      .then(newTodo => {
+        const copyArray = this.state.todos.concat();
+        copyArray.splice(index, 1, newTodo);
+        this.setState({
+          todos: copyArray
+        });
+      });
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
