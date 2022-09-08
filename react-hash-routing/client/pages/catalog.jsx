@@ -53,10 +53,9 @@ function Product(props) {
   // eslint-disable-next-line no-unused-vars
   const { productId, name, price, imageUrl, shortDescription } = props.product;
   /* this anchor should go to product details at `#products?productId=${productId}` */
-  const route = `#products?productId=${productId}`;
   return (
     <a
-      href={route}
+      href={`#products?productId=${productId}`}
       style={styles.product}
       className="text-dark card mb-4 shadow-sm text-decoration-none">
       <img src={imageUrl} className="card-img-top" alt={name} style={styles.image}/>
