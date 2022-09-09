@@ -1,0 +1,18 @@
+The user opens the app on their browser.
+The browser sends a GET request for our HTML document inside the `public` directory.
+The browser goes through out `index.html` and loads what is inside (ex: stylesheet, main.js, etc).
+The `dev-middleware` intercepts the request for `main.js` and webpack produces
+  a giant string that is a bundle of our client modules (bunch of JS) in the place of `main.js`.
+The browser receives this giant string, and executes our front-end code.
+The entry point of our front-end code is an index file. In this case, `index.jsx`.
+
+Inside `index.jsx`:
+  1. import React and ReactDOM from respective packages
+  2. import `App` component from the App module
+  3. create a root div
+  4. tell React to start our application by mounting the `App` component on root div
+  5. ReactDOM calls the `App` component with the new operator
+  6.
+  7. Inside the constructor method:
+     - the `super` function is called with one argument `props`
+     - state is assigned an object with user, isAuthorizing, and route properties
