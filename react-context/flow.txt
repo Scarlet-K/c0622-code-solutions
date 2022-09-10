@@ -1,18 +1,117 @@
 The user opens the app on their browser.
 The browser sends a GET request for our HTML document inside the `public` directory.
-The browser goes through out `index.html` and loads what is inside (ex: stylesheet, main.js, etc).
+The browser goes through our `index.html` and loads what is inside (ex: stylesheet, main.js, etc).
 The `dev-middleware` intercepts the request for `main.js` and webpack produces
   a giant string that is a bundle of our client modules (bunch of JS) in the place of `main.js`.
 The browser receives this giant string, and executes our front-end code.
 The entry point of our front-end code is an index file. In this case, `index.jsx`.
-
 Inside `index.jsx`:
   1. import React and ReactDOM from respective packages
   2. import `App` component from the App module
   3. create a root div
   4. tell React to start our application by mounting the `App` component on root div
-  5. ReactDOM calls the `App` component with the new operator
-  6.
-  7. Inside the constructor method:
+  5. ReactDOM calls the `App` component with the new operator which
+     calls the constructor method with one parameter `props`
+  6. Inside the constructor method:
      - the `super` function is called with one argument `props`
      - state is assigned an object with user, isAuthorizing, and route properties
+     - bind the value of `this` to `handleSignIn` and `handleSignOut` properties of `this` object
+       to ensure the value of `this` at call time
+     - assigns the `handleSignIn` and `handleSignOut` methods as the property of `this` object
+  7. After establishing the constructor method, the render method is called
+  8. Since the value of isAuthorizing is `true`, a blank view is mounted
+  9. With successful mounting, the componentDidMount method is called
+  10. Inside `componentDidMount` method:
+    - add an event listener for hashchanges
+    - the event handler (anonymous arrow function) handles this event by updating
+      the state's route property with the return of a parseRoute method call
+      (an object containing pieces of the current URL) and schedules a rerender on `App`
+  11. token is assigned the JWT we get from the localStorage (if there is any)
+    - user is assigned the decoded token if the token is a truthy value
+      else, null
+    - update the state's user property with the result of the conditional statement
+    - update the state's isAuthorizing property with the value "false"
+  12. render method is called again.
+  13. since isAuthorizing has the value of "false":
+    - state's user and route properties are destructure and saved into variables user and route
+    - this object's handleSignIn and handleSignOut properties are destructured and saved into variables
+    - these variables are saved into the contextValue object
+    - finally, React mounts the context provider with a value of the previously created contextValue object
+      and a react fragment that contains the NavBar and PageContainer components
+    - The PageContainer component calls the renderPage method
+  14. Inside `renderPage` method:
+    - get the current route and assign it to path
+    - check the path, and mount either Home, Auth, or NotFound component
+    - the chosen component's lifecycle begins
+  15. The initial path is an empty string, which starts the Home component's lifecycle
+  16. `Home` component:
+    - calls the render method
+    - checks if the user is signed in
+    - if the user is not signed in, and the value of user is null,
+    - returns the Redirect component with a `to` property of prop object with value "sign-in"
+    - if the user is signed in,
+    - returns the react element that contains the gif
+    - calling componentDidMount?????????????
+  17. by default the user is not signed in and the value of user is null
+  18. Redirect component lifecycle starts
+  19. checks the value of `props.to` and changes the url accordingly
+  20. hashchange event is fired repeating step #10
+  21. render is called repeating step #12 and #13
+  22. BUT this time the path is `sign-in` which returns Auth component
+  23. `Auth` component's lifecycle begins:
+    - render method is called
+    - destructures context that was passed down, and creates user, route, and
+      handleSignIn variables with the passed down values
+    - if the user is signed in, returns Redirect component
+  24. check the path to get the correct welcomeMessage
+  25. since the default is "sign-in", the sign-in message is selected
+  26. mounts several nested react elements including AuthForm component with
+      props (key, action, onSignIn)
+  27. AuthForm lifecycle begins:
+    - calls constructor method which calls super function
+    - sets initial state with two properties: username, password
+    - renders the form
+
+
+User can sign-up (continuing from step #27):
+  1. user clicks the anchor tag "Register now"
+    - this changes the href prop value to "sign-up"
+    - this fires the hashChange event repeating step #10
+    - this schedules a rerender
+    - the sign-up form is rendered
+  2. user types in his/her username/password
+    - every change in the input fires the handleChange event and calls method
+    - creates the variables name and value by destructuring those values from
+      event.target
+    - uses those variables to update the state's name and password
+    - rerender repeating steps #10 and #14
+  3. user submits
+    - fires handleSubmit event and calls method
+    - prevents page from refreshing
+    - creates the variable action by destructuring action from this.props
+    - calls a fetch function which sends a `POST` request to the server with the
+      path `/api/auth/____` (either sign-up or sign-in) and the username and password in the state
+    - server code starts:
+      1. adds all the callbacks
+      2. the server code connects to the database by constructing a `pool`
+      3. the server checks if the username and password is valid
+      4. if it isn't the server throws an error
+      5. the server hashes the password
+      6. sends a sql query to insert the username and hashedPassword (through params)
+         into the database
+      7. ***data (ex: username and hashedPassword) is NEVER hardcoded into the sql***
+      8. the query returns a promise
+      9. in the next `then` method, the promise has resolved into a JSON representation
+         of the data we posted
+      9. creates a user variable by destructuring from `result.rows`
+      10. sends the user the entire row with a 201 status code
+      11. if the result is not what we expected, catch the error
+          and pass the error to the error middleware
+      12. `error-middleware` is called and discerns what type of error it is,
+           and sends the cilent an appropriate error message
+    - the server has replied
+    - parse the JSON string back into an object
+    - check if the fetch request was for "sign-up" or "sign-in"
+    - since it is "sign-up" reassign the hash value of `window.location`
+    - this fires the hashchange event and the method repeating step #10
+    - rerender the entire form with new values for alternateActionHref, Text, and Button
