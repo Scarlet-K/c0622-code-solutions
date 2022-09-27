@@ -1,9 +1,13 @@
 /* exported isEmpty */
 
+// function isEmpty(stack) {
+//   if (stack.peek() === undefined) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
 function isEmpty(stack) {
-  if (stack.peek() === undefined) {
-    return true;
-  } else {
-    return false;
-  }
+  return typeof stack.peek() === 'undefined';
 }
