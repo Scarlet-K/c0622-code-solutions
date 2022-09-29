@@ -11,6 +11,6 @@ function take2nd(queue) {
     return next;
   } else {
     queue.enqueue(first);
-    return undefined;
+    return first;
   }
 }
