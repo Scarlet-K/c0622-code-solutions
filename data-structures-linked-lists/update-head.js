@@ -1,6 +1,6 @@
 /* exported updateHead */
 
 function updateHead(list, value) {
-  if (list.print() === undefined) return;
+  if (list.next === null) return;
   list.data = value;
 }

@@ -2,5 +2,8 @@
 /* exported append */
 
 function append(list, value) {
-
+  const last = new LinkedList(value);
+  if (list.next === null) {
+    list.next = last;
+  }
 }
