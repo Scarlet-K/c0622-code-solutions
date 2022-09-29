@@ -8,9 +8,40 @@
 </head>
 <body>
   <script>
-    // const makeCounter = function () {
-    //   const counter = 0;
-    // };
+    const makeCounter = function () {
+      let privateCounter = 0;
+      function changeBy(val) {
+        privateCounter += val;
+      }
+      return {
+        increment() {
+          changeBy(1);
+        },
+
+        decrement() {
+          changeBy(-1);
+        },
+
+        value() {
+          return privateCounter;
+        }
+  };
+    };
+
+    const counter1 = makeCounter();
+    const counter2 = makeCounter();
+
+    counter1.increment();
+    console.log('increment counter1:', counter1.value());
+    counter1.increment();
+    console.log('increment counter1 again:', counter1.value());
+    counter1.decrement();
+    console.log('decrement counter1:', counter1.value());
+
+    counter2.increment();
+    console.log('increment counter2:', counter2.value());
+    counter2.decrement();
+    console.log('decrement counter2:', counter2.value());
   </script>
 </body>
 </html>
